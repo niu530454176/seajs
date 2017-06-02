@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div class="now"></div>
+<input type="text" data-toggle="calendar"/>
+<pre data-toggle="prettify">
+	define(function (require, exports, module) {
+		var $ = require('jquery');
+		// var Slide = require('./Slide');
+		var moment = require('moment');
+		var slidesjs = require('slidesjs');
+		console.log(moment().format());
+		$('.now').html(moment().format('YYYY-MM-DD HH:mm Z'));
+		var slide = new Slide({
+			$target: $('#slide')
+		})
+	});
+</pre>
+<div id="slide" class="slideBox">
+	<ul class="items J-items">
+		<li>
+			<a href="#" target="_blank">
+				<img src="images/banner1.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="#" target="_blank">
+				<img src="images/banner2.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="#" target="_blank">
+				<img src="images/banner3.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="#" target="_blank">
+				<img src="images/banner4.jpg">
+			</a>
+		</li>
+		<li>
+			<a href="#" target="_blank">
+				<img src="images/banner5.jpg">
+			</a>
+		</li>
+	</ul>
+	<div class="arrows">
+		<a class="arrow-left J-arrow-left" href="javascript:;" target="_self"></a>
+		<a class="arrow-right J-arrow-right" href="javascript:;" target="_self"></a>
+	</div>
+	<div class="dots">
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+	</div>
+</div>
+<script type="text/javascript" src="js/sea.js"></script>
+<script type="text/javascript" src="js/seajs-css.js"></script>
+<script type="text/javascript">
+	seajs.config({
+		base: './js'
+	});
+
+	seajs.use('moon');
+</script>
+</body>
+</html>
